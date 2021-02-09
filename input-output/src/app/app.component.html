@@ -1,6 +1,7 @@
 <h1>How to Use Input</h1>
-<input [(ngModel)]="variable">
-<button (click)="alterText()">send value</button>
-<app-input [textInput]="textAlter"></app-input>
+<label for="input">Enter any value
+  <input [(ngModel)]="inputvalue">
+</label>
+<app-input [textInput]="inputvalue"></app-input>
 <h1>How to use Output</h1>
 <app-output></app-output>

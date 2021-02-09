@@ -7,14 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'input-output';
-  variable: string =  '';
-  textAlter = 'teste'
-
-
-
-  alterText() {
-    console.log(this.variable);
-    this.textAlter = this.variable;
-
-  }
+  inputvalue: string;
 }
