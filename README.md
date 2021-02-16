@@ -1,1 +1,1 @@
-# mystudies-angular
+# Angular
