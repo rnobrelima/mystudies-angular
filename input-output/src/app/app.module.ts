@@ -7,12 +7,14 @@ import { InputComponent } from './components/input/input.component';
 import { OutputComponent } from './components/output/output.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { InputOutputComponent } from './input-output/input-output.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
-    OutputComponent
+    OutputComponent,
+    InputOutputComponent
   ],
   imports: [
     BrowserModule,
