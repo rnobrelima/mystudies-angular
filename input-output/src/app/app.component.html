@@ -1,7 +1,23 @@
-<h1>How to Use Input</h1>
-<label for="input">Enter any value
+<h1>This Is Parent Component</h1>
+
+<label>Enter any value to send by input to childrem component
   <input [(ngModel)]="inputvalue">
 </label>
+
+<h2>Data received by Output: {{ outPutValue }}</h2>
+
+<div>
+  <h3>Build Array With Output value</h3>
+  <ul>
+    <li *ngFor="let item of Items">{{item}}</li>
+  </ul>
+</div>
+
+
+
+
+<h2>How to Use Input</h2>
 <app-input [textInput]="inputvalue"></app-input>
-<h1>How to use Output</h1>
-<app-output></app-output>
+<h2>How to use Output</h2>
+<app-output (OutPutEvent)="receiveOutput($event)" ></app-output>
+

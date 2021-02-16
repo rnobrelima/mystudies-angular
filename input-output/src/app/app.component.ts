@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'input-output';
   inputvalue: string;
+  outPutValue = "";
+  Items: any[] = [];
+
+
+  receiveOutput(item: string) {
+    this.outPutValue = item
+    this.Items.push(item)
+  }
 }

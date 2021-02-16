@@ -1,1 +1,6 @@
-<p>This is my component Output</p>
+<h3>This is my component Output</h3>
+
+<label>Add Item
+    <input type="text" #outPutText>
+</label>
+<button (click)="sendOutPutEvent(outPutText.value)">Send to Parent by Output</button>
