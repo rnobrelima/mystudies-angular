@@ -1,0 +1,49 @@
+<div>
+    <input #itemToList>
+    <button (click)="addItem(itemToList.value)"> Adicionar Item </button>
+    <input #itemToList>
+    <button (click)="removeItem(itemToList.value)">Remover Item </button>
+</div>
+<div class="example-container">
+    <h2>To do</h2>
+  <div
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="todo"
+    [cdkDropListConnectedTo]="[progressList,todoList,doneList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}
+      <button mat-button (click)="editItem(item)">Edit</button>
+        <button (click)="removeItem(item)">x</button>
+    </div>
+  </div>
+</div>
+
+    <div class="example-container">
+        <h2>Progress</h2>
+        <div
+        cdkDropList
+        #progressList="cdkDropList"
+        [cdkDropListConnectedTo]="[doneList,todoList]"
+        [cdkDropListData]="progress"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of progress" cdkDrag>{{item}}</div>
+
+        </div>
+    </div>
+
+<div class="example-container">
+  <h2>Done</h2>
+
+  <div
+    cdkDropList
+    #doneList="cdkDropList"
+    [cdkDropListData]="done"
+    [cdkDropListConnectedTo]="[todoList,progressList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+  </div>
+</div>
